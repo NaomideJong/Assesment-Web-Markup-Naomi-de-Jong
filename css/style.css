@@ -9,5 +9,14 @@
   color: mediumaquamarine;
 }
 .logo {
-  height: 7vh;
+  width: 7vh;
+}
+.imgbarracuda {
+  width: 50vh;
+}
+.imgbluecorner {
+  width: 50vh;
+}
+.imgyongala {
+  width: 50vh;
 }
