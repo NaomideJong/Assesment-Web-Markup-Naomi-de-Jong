@@ -10,18 +10,21 @@
   </head>
   <body>
     <header>
-      <section class="hamburger">
-        <section class="toggle-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </section>
-        <ul class="burgermenu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bestdestinations">Best Destinations</a></li>
-          <li><a href="tickets">Tickets</a></li>
-          <li><a href="contact">Contact</a></li>
-        </ul>
+      <section class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bestdestinations">Best Destinations</a></li>
+                <li><a href="tickets">Tickets</a></li>
+                <li><a href="contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <img class="logo" src="images/logo.svg" alt="Little blue fish logo" />
       <h1>Submerged Travel</h1>
@@ -38,8 +41,18 @@
     <main>
       <video class="vid" loop autoplay muted>
         <source src="/images/video.mp4" type="video/mp4" />
+        <source src="/images/video.ogg" type="video/ogg" />
         Your browser does not support the video tag.
       </video>
+      <aside class="routes">
+        <ol>
+          <li>The Sea of Cortez, Midriff Islands</li>
+          <li>Indonesia, North Sulawesi</li>
+          <li>Dominica, Caribbean Sea</li>
+          <li>Egypt, Samadai Reef</li>
+          <li>Tanzania, Zanzibar</li>
+        </ol>
+      </aside>
       <section class="articles">
         <section>
           <article class="barracuda">
