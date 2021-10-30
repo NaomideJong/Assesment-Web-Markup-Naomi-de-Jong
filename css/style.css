@@ -11,14 +11,47 @@ html {
   background-color: rgb(36, 36, 36);
 }
 
+h1 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  margin: 3%;
+  text-shadow: 4px 4px black;
+}
+
+h2 {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  margin: 3%;
+  text-shadow: 4px 4px black;
+}
+
+.logo {
+  width: 8rem;
+  padding: 1%;
+  float: right;
+}
+
+.navigation {
+  background-color: black;
+  text-align: center;
+}
+
 .navigation li a {
+  background-color: black;
   color: mediumaquamarine;
-  font-size: 1.3rem;
-  margin: 0 0.8rem;
+  font-size: 2rem;
+  border: white;
+  border-left: solid;
+  border-right: solid;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navigation li {
-  display: block;
+  display: inline;
   text-decoration: none;
 }
 
@@ -30,52 +63,135 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 2.5em;
-  color: white;
-  text-align: center;
-}
-
-h2 {
-  color: white;
-  font-size: 1em;
-}
-
-.logo {
-  width: 7vh;
-  padding: 0;
-  float: right;
-  margin-right: 2%;
-}
-
 .routes {
-  padding: 1.8rem;
+  padding: 1.5rem;
   background-color: rgb(58, 85, 76);
   float: right;
   border: #fff;
   border-style: solid;
+  display: inline;
 }
 .routes li {
   color: #fff;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 1rem;
 }
 
 article {
   color: white;
   font-size: 1em;
+  float: left;
+  left: 0;
 }
 
+.barracuda {
+  border: #fff;
+  border-style: solid;
+  padding: 3%;
+  margin: 1%;
+  float: left;
+  display: flex;
+  margin-right: 25%;
+}
+.barracuda header {
+  margin-top: -2%;
+  margin-left: -2%;
+  display: inline;
+}
+.barracuda p {
+  vertical-align: middle;
+  margin: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
 .imgbarracuda {
-  width: 50vh;
+  width: 250rem;
+  border: #fff;
+  border-style: solid;
+  margin: 2%;
+  float: right;
+  vertical-align: text-top;
+  max-width: 100%;
 }
 
+.bluecorner {
+  border: #fff;
+  border-style: solid;
+  padding: 3%;
+  margin: 1%;
+  float: left;
+  display: flex;
+  margin-right: 25%;
+}
+.bluecorner header {
+  margin: 1%;
+  margin-top: -2%;
+  margin-left: -2%;
+}
+.bluecorner p {
+  vertical-align: middle;
+  margin: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
 .imgbluecorner {
-  width: 50vh;
+  width: 300rem;
+  border: #fff;
+  border-style: solid;
+  margin: 2%;
+  float: right;
+  vertical-align: text-top;
+  max-width: 100%;
 }
 
+.yongala {
+  border: #fff;
+  border-style: solid;
+  padding: 3%;
+  margin: 1%;
+  float: left;
+  display: flex;
+  margin-right: 25%;
+}
+.yongala header {
+  margin: 1%;
+  margin-top: -2%;
+  margin-left: -2%;
+}
+.yongala p {
+  vertical-align: middle;
+  margin: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
 .imgyongala {
-  width: 50vh;
+  width: 300rem;
+  border: #fff;
+  border-style: solid;
+  margin: 2%;
+  float: right;
+  vertical-align: text-top;
+  max-width: 100%;
+}
+
+.infolink {
+  font-size: 1.5em;
+  background-color: white;
+  border: black;
+  border-style: solid;
+  padding: 1%;
+  margin: 1%;
+  text-decoration: underline;
+  float: right;
+}
+
+.infolink a {
+  text-decoration: none;
+  color: mediumaquamarine;
+}
+
+.infolink a:hover {
+  opacity: 40%;
 }
 
 .vid {
@@ -233,5 +349,8 @@ article {
 @media screen and (max-width: 480px) {
   .menu-wrap {
     display: block;
+  }
+  .navigation {
+    display: none;
   }
 }
