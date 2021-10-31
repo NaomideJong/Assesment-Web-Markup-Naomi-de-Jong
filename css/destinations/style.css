@@ -78,11 +78,86 @@ body {
   width: 100vw;
 }
 
+/* Grid Start */
+
 main {
-  float: left;
-  width: 80%;
-  box-sizing: border-box;
-  margin-bottom: 5rem;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2rem;
+  grid-template-areas:
+    "article2 article1 article3"
+    "article2 article1 article3"
+    "article5 article1 article3"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article6 article6"
+    "product1 product2 product3";
+}
+
+main .article1 {
+  grid-area: article1;
+  padding: 3%;
+  align-self: center;
+}
+main .article2 {
+  grid-area: article2;
+  padding: 3%;
+  align-self: start;
+}
+main .article3 {
+  grid-area: article3;
+  padding: 3%;
+  align-self: end;
+}
+main .article4 {
+  grid-area: article4;
+  padding: 3%;
+  align-self: end;
+}
+main .article5 {
+  grid-area: article5;
+  padding: 3%;
+  align-self: center;
+}
+main .article6 {
+  grid-area: article6;
+  padding: 3%;
+  align-self: start;
+}
+
+main .product1 {
+  grid-area: product1;
+  padding: 5%;
+  align-self: center;
+}
+main .product2 {
+  grid-area: product2;
+  padding: 5%;
+  align-self: center;
+}
+main .product3 {
+  grid-area: product3;
+  padding: 5%;
+  align-self: center;
+}
+
+/* Grid End */
+
+aside img {
+  width: 70%;
+}
+
+main {
+  padding: 2%;
+}
+main header {
+  font-size: 1.5em;
+  margin: 3%;
+}
+p {
+  font-size: 1em;
 }
 
 footer {
@@ -270,30 +345,24 @@ footer {
 /* End Hamburger Menu */
 
 @media screen and (max-width: 1180px) {
-  .articles {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .barracuda {
-    flex-direction: row-reverse;
-  }
-  .bluecorner {
-    flex-direction: row-reverse;
-  }
-  .yongala {
-    flex-direction: row-reverse;
-  }
-  figure {
-    order: 1;
-  }
-  .routes {
-    position: static;
-    order: -1;
-    width: 30%;
-  }
   main {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "article1 article2"
+      "article1 article2"
+      "article3 article2"
+      "article3 article5"
+      "article3 article5"
+      "article3 article5"
+      "article6 article6"
+      "article6 article6"
+      "product1 product2";
+  }
+  .article4 {
+    display: none;
+  }
+  .product3 {
+    display: none;
   }
 }
 
@@ -304,40 +373,29 @@ footer {
   .navigation {
     display: none;
   }
-  .routes {
-    position: static;
-    order: 1;
-    width: 80%;
-  }
   main {
-    display: flex;
-    flex-direction: column-reverse;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "article5 ."
+      "article5 ."
+      "article5 ."
+      "article3 ."
+      "article3 ."
+      "article3 ."
+      "article2 ."
+      "article2 ."
+      "article2 ."
+      "article1 ."
+      "article1 ."
+      "article1 ."
+      "product1 ."
+      "product2 ."
+      "product3 .";
   }
-  .articles {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100vw;
-    padding: 1%;
+  .article4 {
+    display: none;
   }
-  .barracuda {
-    flex-direction: column;
-  }
-  .bluecorner {
-    flex-direction: column;
-  }
-  .yongala {
-    flex-direction: column;
-  }
-  .imgbarracuda {
-    float: left;
-  }
-  .imgbluecorner {
-    float: left;
-  }
-  .imgyongala {
-    float: left;
-  }
-  .vid {
+  .article6 {
     display: none;
   }
 }

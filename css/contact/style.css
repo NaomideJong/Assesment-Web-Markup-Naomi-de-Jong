@@ -29,6 +29,14 @@ h2 {
   text-shadow: 4px 4px black;
   margin-right: 15%;
 }
+h3 {
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  margin: 3%;
+  padding-right: 3rem;
+  text-shadow: 4px 4px black;
+}
 
 .logo {
   width: 8rem;
@@ -70,168 +78,86 @@ body {
   width: 100vw;
 }
 
+/* Grid Start */
+
 main {
-  float: left;
-  width: 80%;
-  box-sizing: border-box;
-  margin-bottom: 5rem;
-}
-
-.vid {
-  width: 100vw;
-}
-
-article {
   color: #ffffff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2rem;
+  grid-template-areas:
+    "article2 article1 article3"
+    "article2 article1 article3"
+    "article5 article1 article3"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article6 article6"
+    "product1 product2 product3";
+}
+
+main .article1 {
+  grid-area: article1;
+  padding: 3%;
+  align-self: center;
+}
+main .article2 {
+  grid-area: article2;
+  padding: 3%;
+  align-self: start;
+}
+main .article3 {
+  grid-area: article3;
+  padding: 3%;
+  align-self: end;
+}
+main .article4 {
+  grid-area: article4;
+  padding: 3%;
+  align-self: end;
+}
+main .article5 {
+  grid-area: article5;
+  padding: 3%;
+  align-self: center;
+}
+main .article6 {
+  grid-area: article6;
+  padding: 3%;
+  align-self: start;
+}
+
+main .product1 {
+  grid-area: product1;
+  padding: 5%;
+  align-self: center;
+}
+main .product2 {
+  grid-area: product2;
+  padding: 5%;
+  align-self: center;
+}
+main .product3 {
+  grid-area: product3;
+  padding: 5%;
+  align-self: center;
+}
+
+/* Grid End */
+
+aside img {
+  width: 70%;
+}
+
+main {
+  padding: 2%;
+}
+main header {
+  font-size: 1.5em;
+  margin: 3%;
+}
+p {
   font-size: 1em;
-  float: left;
-  left: 0;
-}
-
-.barracuda {
-  border: #fff;
-  border-style: solid;
-  padding: 3%;
-  margin: 1%;
-  float: left;
-  margin-right: 10%;
-  display: flex;
-  flex-direction: row;
-}
-.barracuda header {
-  margin-top: -3%;
-  margin-left: -3%;
-  font-size: 1.8em;
-}
-.barracuda p {
-  margin: 2%;
-  padding-left: 7%;
-  padding-right: 7%;
-  font-size: 1.2em;
-}
-.imgbarracuda {
-  width: 200rem;
-  border: #fff;
-  border-style: solid;
-  margin: 2%;
-  margin-top: 10%;
-  float: right;
-  vertical-align: top;
-  max-width: 100%;
-}
-.linkbarracuda {
-  font-size: 1.5em;
-  float: right;
-  margin: 2em;
-  padding: 0.5rem;
-  background-color: #66cdaa;
-  height: 4rem;
-  width: 5rem;
-}
-
-.bluecorner {
-  border: #fff;
-  border-style: solid;
-  padding: 3%;
-  margin: 1%;
-  float: left;
-  margin-right: 10%;
-  display: flex;
-  flex-direction: row;
-}
-.bluecorner header {
-  margin-top: -2%;
-  margin-left: -2%;
-  font-size: 1.8em;
-}
-.bluecorner p {
-  margin: 2%;
-  padding-left: 7%;
-  padding-right: 7%;
-  font-size: 1.2em;
-}
-.imgbluecorner {
-  width: 200rem;
-  border: #fff;
-  border-style: solid;
-  margin: 2%;
-  margin-top: 10%;
-  float: right;
-  vertical-align: middle;
-  max-width: 100%;
-}
-.linkbluecorner {
-  font-size: 1.5em;
-  float: right;
-  margin: 2em;
-  padding: 0.5rem;
-  background-color: #66cdaa;
-  height: 4rem;
-  width: 5rem;
-}
-
-.yongala {
-  border: #fff;
-  border-style: solid;
-  padding: 3%;
-  margin: 1%;
-  float: left;
-  margin-right: 10%;
-  display: flex;
-  flex-direction: row;
-}
-.yongala header {
-  margin: 1%;
-  margin-top: -2%;
-  margin-left: -2%;
-  font-size: 1.8em;
-}
-.yongala p {
-  vertical-align: middle;
-  margin: 2%;
-  padding-left: 7%;
-  padding-right: 7%;
-  font-size: 1.2em;
-}
-.imgyongala {
-  width: 200rem;
-  border: #fff;
-  border-style: solid;
-  margin: 2%;
-  margin-top: 10%;
-  float: right;
-  vertical-align: text-top;
-  max-width: 100%;
-}
-.linkyongala {
-  font-size: 1.5em;
-  float: right;
-  margin: 2em;
-  padding: 0.5rem;
-  background-color: #66cdaa;
-  height: 4rem;
-  width: 5rem;
-}
-
-figcaption {
-  color: #ffffff;
-}
-
-.routes {
-  background-color: rgb(58, 85, 76);
-  float: right;
-  border: #fff;
-  border-style: solid;
-  padding: 1rem;
-  margin-top: 1rem;
-  position: fixed;
-  top: 40%;
-  right: 1rem;
-  color: #ffffff;
-}
-.routes li {
-  font-size: 1em;
-  margin: 1rem;
 }
 
 footer {
@@ -419,30 +345,24 @@ footer {
 /* End Hamburger Menu */
 
 @media screen and (max-width: 1180px) {
-  .articles {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .barracuda {
-    flex-direction: row-reverse;
-  }
-  .bluecorner {
-    flex-direction: row-reverse;
-  }
-  .yongala {
-    flex-direction: row-reverse;
-  }
-  figure {
-    order: 1;
-  }
-  .routes {
-    position: static;
-    order: -1;
-    width: 30%;
-  }
   main {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "article1 article2"
+      "article1 article2"
+      "article3 article2"
+      "article3 article5"
+      "article3 article5"
+      "article3 article5"
+      "article6 article6"
+      "article6 article6"
+      "product1 product2";
+  }
+  .article4 {
+    display: none;
+  }
+  .product3 {
+    display: none;
   }
 }
 
@@ -453,40 +373,29 @@ footer {
   .navigation {
     display: none;
   }
-  .routes {
-    position: static;
-    order: 1;
-    width: 80%;
-  }
   main {
-    display: flex;
-    flex-direction: column-reverse;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "article5 ."
+      "article5 ."
+      "article5 ."
+      "article3 ."
+      "article3 ."
+      "article3 ."
+      "article2 ."
+      "article2 ."
+      "article2 ."
+      "article1 ."
+      "article1 ."
+      "article1 ."
+      "product1 ."
+      "product2 ."
+      "product3 .";
   }
-  .articles {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100vw;
-    padding: 1%;
+  .article4 {
+    display: none;
   }
-  .barracuda {
-    flex-direction: column;
-  }
-  .bluecorner {
-    flex-direction: column;
-  }
-  .yongala {
-    flex-direction: column;
-  }
-  .imgbarracuda {
-    float: left;
-  }
-  .imgbluecorner {
-    float: left;
-  }
-  .imgyongala {
-    float: left;
-  }
-  .vid {
+  .article6 {
     display: none;
   }
 }
