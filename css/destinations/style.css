@@ -1,0 +1,343 @@
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  text-decoration: none;
+  background-color: rgb(36, 36, 36);
+  --primary-color: #66cdaa;
+  --overlay-color: #000000;
+  --menu-speed: 0.75s;
+}
+
+h1 {
+  font-size: 2.6em;
+  color: #ffffff;
+  text-align: center;
+  margin: 2%;
+  text-shadow: 4px 4px black;
+  margin-right: 15%;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  margin: 3%;
+  text-shadow: 4px 4px black;
+  margin-right: 15%;
+}
+h3 {
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  margin: 3%;
+  padding-right: 3rem;
+  text-shadow: 4px 4px black;
+}
+
+.logo {
+  width: 8rem;
+  padding: 1%;
+  float: left;
+}
+
+.navigation {
+  background-color: #000000;
+  text-align: center;
+}
+
+.navigation li a {
+  background-color: #000000;
+  color: #66cdaa;
+  font-size: 2rem;
+  border: #ffffff;
+  border-left: solid;
+  border-right: solid;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navigation li {
+  display: inline;
+  text-decoration: none;
+}
+
+.navigation li:hover {
+  opacity: 0.3;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+}
+
+main {
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  margin-bottom: 5rem;
+}
+
+footer {
+  background-color: #66cdaa;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  font-size: 0.7em;
+}
+.credit {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  margin-right: 35%;
+}
+.copyright {
+  float: left;
+  margin: 3%;
+  margin-right: 35%;
+}
+.cookies {
+  float: right;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #fa0;
+  opacity: 50%;
+  height: 3rem;
+  padding-top: 1rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start Hamburger Menu */
+
+.burgermenu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.burgermenu .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.burgermenu .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burgermenu .hamburger > span {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.burgermenu .hamburger > span::before,
+.burgermenu .hamburger > span::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.burgermenu .hamburger > span::after {
+  top: 10px;
+}
+
+.burgermenu .toggler:checked + .hamburger > span {
+  transform: rotate(135deg);
+}
+
+.burgermenu .toggler:checked + .hamburger > span:before,
+.burgermenu .toggler:checked + .hamburger > span:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.burgermenu .toggler:checked:hover + .hamburger > span {
+  transform: rotate(225deg);
+}
+
+.burgermenu .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.burgermenu .toggler:checked ~ .menu > span {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.burgermenu .toggler:checked ~ .menu > span > span {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.burgermenu .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a:hover {
+  opacity: 50%;
+}
+
+.burgermenu .menu > span {
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.burgermenu .menu > section {
+  background: var(--overlay-color);
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burgermenu .menu > section > span {
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.burgermenu .menu > section > section > ul > li {
+  list-style: none;
+  color: #66cdaa;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.burgermenu .menu > section > section > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/* End Hamburger Menu */
+
+@media screen and (max-width: 1180px) {
+  .articles {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .barracuda {
+    flex-direction: row-reverse;
+  }
+  .bluecorner {
+    flex-direction: row-reverse;
+  }
+  .yongala {
+    flex-direction: row-reverse;
+  }
+  figure {
+    order: 1;
+  }
+  .routes {
+    position: static;
+    order: -1;
+    width: 30%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .burgermenu {
+    display: block;
+  }
+  .navigation {
+    display: none;
+  }
+  .routes {
+    position: static;
+    order: 1;
+    width: 80%;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .articles {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    padding: 1%;
+  }
+  .barracuda {
+    flex-direction: column;
+  }
+  .bluecorner {
+    flex-direction: column;
+  }
+  .yongala {
+    flex-direction: column;
+  }
+  .imgbarracuda {
+    float: left;
+  }
+  .imgbluecorner {
+    float: left;
+  }
+  .imgyongala {
+    float: left;
+  }
+  .vid {
+    display: none;
+  }
+}
