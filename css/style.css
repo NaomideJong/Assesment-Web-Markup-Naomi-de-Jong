@@ -3,20 +3,24 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  text-transform: capitalize;
   outline: none;
   border: none;
+  position: relative;
   text-decoration: none;
   transition: all 0.2 linear;
   background-color: rgb(36, 36, 36);
+  --primary-color: mediumaquamarine;
+  --overlay-color: black;
+  --menu-speed: 0.75s;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   color: white;
   text-align: center;
-  margin: 3%;
+  margin: 2%;
   text-shadow: 4px 4px black;
+  margin-right: 15%;
 }
 
 h2 {
@@ -25,12 +29,13 @@ h2 {
   text-align: center;
   margin: 3%;
   text-shadow: 4px 4px black;
+  margin-right: 15%;
 }
 
 .logo {
   width: 8rem;
   padding: 1%;
-  float: right;
+  float: left;
 }
 
 .navigation {
@@ -63,18 +68,13 @@ a {
   text-decoration: none;
 }
 
-.routes {
-  padding: 1.5rem;
-  background-color: rgb(58, 85, 76);
-  float: right;
-  border: #fff;
-  border-style: solid;
-  display: inline;
-}
-.routes li {
-  color: #fff;
-  font-size: 0.8em;
-  margin: 1rem;
+main {
+  display: flex;
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 article {
@@ -90,28 +90,37 @@ article {
   padding: 3%;
   margin: 1%;
   float: left;
+  margin-right: 10%;
   display: flex;
-  margin-right: 25%;
+  flex-direction: row;
 }
 .barracuda header {
-  margin-top: -2%;
-  margin-left: -2%;
-  display: inline;
+  margin-top: -3%;
+  margin-left: -3%;
+  font-size: 1.8em;
 }
 .barracuda p {
-  vertical-align: middle;
   margin: 2%;
   padding-left: 7%;
   padding-right: 7%;
+  font-size: 1.2em;
 }
 .imgbarracuda {
-  width: 250rem;
+  width: 150rem;
   border: #fff;
   border-style: solid;
   margin: 2%;
+  margin-top: 10%;
   float: right;
-  vertical-align: text-top;
+  vertical-align: top;
   max-width: 100%;
+}
+.linkbarracuda {
+  float: right;
+  display: flex;
+  margin: 2em;
+  padding: 0.5rem;
+  background-color: mediumaquamarine;
 }
 
 .bluecorner {
@@ -120,28 +129,37 @@ article {
   padding: 3%;
   margin: 1%;
   float: left;
+  margin-right: 10%;
   display: flex;
-  margin-right: 25%;
+  flex-direction: row;
 }
 .bluecorner header {
-  margin: 1%;
   margin-top: -2%;
   margin-left: -2%;
+  font-size: 1.8em;
 }
 .bluecorner p {
-  vertical-align: middle;
   margin: 2%;
   padding-left: 7%;
   padding-right: 7%;
+  font-size: 1.2em;
 }
 .imgbluecorner {
-  width: 300rem;
+  width: 200rem;
   border: #fff;
   border-style: solid;
   margin: 2%;
+  margin-top: 10%;
   float: right;
-  vertical-align: text-top;
+  vertical-align: middle;
   max-width: 100%;
+}
+.linkbluecorner {
+  float: right;
+  display: flex;
+  margin: 2em;
+  padding: 0.5rem;
+  background-color: mediumaquamarine;
 }
 
 .yongala {
@@ -150,48 +168,55 @@ article {
   padding: 3%;
   margin: 1%;
   float: left;
+  margin-right: 10%;
   display: flex;
-  margin-right: 25%;
+  flex-direction: row;
 }
 .yongala header {
   margin: 1%;
   margin-top: -2%;
   margin-left: -2%;
+  font-size: 1.8em;
 }
 .yongala p {
   vertical-align: middle;
   margin: 2%;
   padding-left: 7%;
   padding-right: 7%;
+  font-size: 1.2em;
 }
 .imgyongala {
-  width: 300rem;
+  width: 200rem;
   border: #fff;
   border-style: solid;
   margin: 2%;
+  margin-top: 10%;
   float: right;
   vertical-align: text-top;
   max-width: 100%;
 }
-
-.infolink {
-  font-size: 1.5em;
-  background-color: white;
-  border: black;
-  border-style: solid;
-  padding: 1%;
-  margin: 1%;
-  text-decoration: underline;
+.linkyongala {
   float: right;
+  display: flex;
+  margin: 2em;
+  padding: 0.5rem;
+  background-color: mediumaquamarine;
 }
 
-.infolink a {
-  text-decoration: none;
-  color: mediumaquamarine;
+.routes {
+  background-color: rgb(58, 85, 76);
+  float: right;
+  border: #fff;
+  border-style: solid;
+  padding: 1rem;
+  margin-top: 1rem;
+  position: absolute;
+  right: 2rem;
 }
-
-.infolink a:hover {
-  opacity: 40%;
+.routes li {
+  color: #fff;
+  font-size: 1em;
+  margin: 1rem;
 }
 
 .vid {
@@ -199,10 +224,35 @@ article {
   width: 100%;
 }
 
-:root {
-  --primary-color: mediumaquamarine;
-  --overlay-color: black;
-  --menu-speed: 0.75s;
+footer {
+  background-color: mediumaquamarine;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  font-size: 0.7em;
+}
+.credit {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  margin-right: 35%;
+}
+.copyright {
+  float: left;
+  margin: 2%;
+  margin-right: 35%;
+}
+.cookies {
+  float: right;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #fa0;
+  opacity: 50%;
+  height: 3rem;
+  padding-top: 1rem;
 }
 
 * {
@@ -211,18 +261,20 @@ article {
   box-sizing: border-box;
 }
 
-.menu-wrap {
+.burgermenu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1;
+  right: 0;
   display: none;
 }
 
-.menu-wrap .toggler {
+.burgermenu .toggler {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -230,10 +282,10 @@ article {
   opacity: 0;
 }
 
-.menu-wrap .hamburger {
+.burgermenu .hamburger {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -244,7 +296,7 @@ article {
   justify-content: center;
 }
 
-.menu-wrap .hamburger > div {
+.burgermenu .hamburger > span {
   position: relative;
   flex: none;
   width: 100%;
@@ -256,8 +308,8 @@ article {
   transition: all 0.4s ease;
 }
 
-.menu-wrap .hamburger > div::before,
-.menu-wrap .hamburger > div::after {
+.burgermenu .hamburger > span::before,
+.burgermenu .hamburger > span::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -267,39 +319,39 @@ article {
   background: inherit;
 }
 
-.menu-wrap .hamburger > div::after {
+.burgermenu .hamburger > span::after {
   top: 10px;
 }
 
-.menu-wrap .toggler:checked + .hamburger > div {
+.burgermenu .toggler:checked + .hamburger > span {
   transform: rotate(135deg);
 }
 
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
+.burgermenu .toggler:checked + .hamburger > span:before,
+.burgermenu .toggler:checked + .hamburger > span:after {
   top: 0;
   transform: rotate(90deg);
 }
 
-.menu-wrap .toggler:checked:hover + .hamburger > div {
+.burgermenu .toggler:checked:hover + .hamburger > span {
   transform: rotate(225deg);
 }
 
-.menu-wrap .toggler:checked ~ .menu {
+.burgermenu .toggler:checked ~ .menu {
   visibility: visible;
 }
 
-.menu-wrap .toggler:checked ~ .menu > div {
+.burgermenu .toggler:checked ~ .menu > span {
   transform: scale(1);
   transition-duration: var(--menu-speed);
 }
 
-.menu-wrap .toggler:checked ~ .menu > div > div {
+.burgermenu .toggler:checked ~ .menu > span > span {
   opacity: 1;
   transition: opacity 0.4s ease 0.4s;
 }
 
-.menu-wrap .menu {
+.burgermenu .menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -312,7 +364,11 @@ article {
   justify-content: center;
 }
 
-.menu-wrap .menu > div {
+.menu a:hover {
+  opacity: 50%;
+}
+
+.burgermenu .menu > span {
   background: var(--overlay-color);
   border-radius: 50%;
   width: 200vw;
@@ -325,7 +381,7 @@ article {
   transition: all 0.4s ease;
 }
 
-.menu-wrap .menu > div > div {
+.burgermenu .menu > span > span {
   text-align: center;
   max-width: 90vw;
   max-height: 100vh;
@@ -333,24 +389,33 @@ article {
   transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.burgermenu .menu > span > span > ul > li {
   list-style: none;
   color: mediumaquamarine;
   font-size: 1.5rem;
   padding: 1rem;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.burgermenu .menu > span > span > ul > li > a {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
 }
 
 @media screen and (max-width: 480px) {
-  .menu-wrap {
+  .burgermenu {
     display: block;
   }
   .navigation {
     display: none;
+  }
+  .barracuda {
+    flex-direction: column;
+  }
+  .bluecorner {
+    flex-direction: column;
+  }
+  .yongala {
+    flex-direction: column;
   }
 }

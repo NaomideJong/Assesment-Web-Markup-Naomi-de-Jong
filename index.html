@@ -10,27 +10,27 @@
   </head>
   <body>
     <header>
-      <section class="menu-wrap">
+      <section class="burgermenu">
         <input type="checkbox" class="toggler" />
-        <div class="hamburger"><div></div></div>
-        <div class="menu">
-          <div>
-            <div>
+        <span class="hamburger"><span></span></span>
+        <span class="menu">
+          <span>
+            <span>
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bestdestinations">Best Destinations</a></li>
                 <li><a href="tickets">Tickets</a></li>
                 <li><a href="contact">Contact</a></li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </span>
+          </span>
+        </span>
       </section>
       <img class="logo" src="images/logo.svg" alt="Little blue fish logo" />
       <h1>Submerged Travel</h1>
       <h2>Wildlive of the abyss</h2>
       <nav class="navigation">
-        <ul class="burgermenu">
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="bestdestinations">Best Destinations</a></li>
           <li><a href="tickets">Tickets</a></li>
@@ -38,21 +38,12 @@
         </ul>
       </nav>
     </header>
+    <video class="vid" loop autoplay muted>
+      <source src="/images/video.mp4" type="video/mp4" />
+      <source src="/images/video.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
     <main>
-      <video class="vid" loop autoplay muted>
-        <source src="/images/video.mp4" type="video/mp4" />
-        <source src="/images/video.ogg" type="video/ogg" />
-        Your browser does not support the video tag.
-      </video>
-      <aside class="routes">
-        <ol>
-          <li>The Sea of Cortez, Midriff Islands</li>
-          <li>Indonesia, North Sulawesi</li>
-          <li>Dominica, Caribbean Sea</li>
-          <li>Egypt, Samadai Reef</li>
-          <li>Tanzania, Zanzibar</li>
-        </ol>
-      </aside>
       <section class="articles">
         <section>
           <article class="barracuda">
@@ -68,13 +59,22 @@
               certainly one of the best places to go.
             </p>
             <figure>
-              <img
-                class="imgbarracuda"
-                src="images/barracuda.jpg"
-                title="Barracuda Point"
-                alt="sectioner with a flashlight swimming in a big circle of barracuda"
-              />
+              <a
+                href="https://www.expedia.nl/Mabul-Island.d6350143.Vakantie-Stedentrips"
+              >
+                <img
+                  class="imgbarracuda"
+                  src="images/barracuda.jpg"
+                  title="Barracuda Point"
+                  alt="sectioner with a flashlight swimming in a big circle of barracuda"
+                />
+              </a>
               <figcaption>Diver swimming with barracudas</figcaption>
+              <a
+                class="linkbarracuda"
+                href="https://www.expedia.nl/Mabul-Island.d6350143.Vakantie-Stedentrips"
+                >More info</a
+              >
             </figure>
             <footer></footer>
           </article>
@@ -94,13 +94,21 @@
               sleeping sharks and beautiful coral formations.
             </p>
             <figure>
-              <img
-                class="imgbluecorner"
-                src="images/bluecorner.jpg"
-                title="Blue Corner Wall"
-                alt="small island in a clear blue sea"
-              />
+              <a
+                href="https://www.duikreizen.nl/vakantie/Micronesie/Palau/Koror,-Palau/Palau-Pacific-Resort/69329"
+              >
+                <img
+                  class="imgbluecorner"
+                  src="images/bluecorner.jpg"
+                  title="Blue Corner Wall"
+                  alt="small island in a clear blue sea"
+              /></a>
               <figcaption>Blue Corner Wall</figcaption>
+              <a
+                class="linkbluecorner"
+                href="https://www.duikreizen.nl/vakantie/Micronesie/Palau/Koror,-Palau/Palau-Pacific-Resort/69329"
+                >More info</a
+              >
             </figure>
             <footer></footer>
           </article>
@@ -120,20 +128,47 @@
               the bow points north and the ship lists to starboard.
             </p>
             <figure>
-              <img
-                class="imgyongala"
-                src="images/yongala.jpg"
-                title="The Yongala"
-                alt="a sectioner shining a flashlight on a fish"
-              />
+              <a href="https://www.yongaladive.com.au">
+                <img
+                  class="imgyongala"
+                  src="images/yongala.jpg"
+                  title="The Yongala"
+                  alt="a sectioner shining a flashlight on a fish"
+              /></a>
               <figcaption>Diver exploring in The Yongala</figcaption>
+              <a class="linkyongala" href="https://www.yongaladive.com.au"
+                >More info</a
+              >
             </figure>
             <footer></footer>
           </article>
-          <a class="infolink" href="https://www.liveaboard.com">More info</a>
         </section>
       </section>
+      <section class="asideandinfo">
+        <aside class="routes">
+          <ol>
+            <li>The Sea of Cortez, Midriff Islands</li>
+            <li>Indonesia, North Sulawesi</li>
+            <li>Dominica, Caribbean Sea</li>
+            <li>Egypt, Samadai Reef</li>
+            <li>Tanzania, Zanzibar</li>
+          </ol>
+        </aside>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="copyright">&copy;Naomi de Jong, 562748</section>
+      <section class="credit">
+        Pictures form
+        <a class="palaudive" href="https://palaudiveadventures.com"
+          >Palaudive Adventures</a
+        >
+        <a class="alertdiver" href="https://alertdiver.eu/nl">Alert Diver</a>
+        <a class="yongaladive" href="https://www.yongaladive.com.au"
+          >Yongala Dive</a
+        >
+      </section>
+      <section class="cookies">No cookies used here!</section>
+    </footer>
   </body>
 </html>
