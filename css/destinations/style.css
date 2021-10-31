@@ -81,6 +81,7 @@ body {
 /* Grid Start */
 
 main {
+  width: 100vw;
   color: #ffffff;
   display: grid;
   column-gap: 2rem;
@@ -126,19 +127,30 @@ main .article6 {
   align-self: start;
 }
 
-.aside {
+.imgnubian {
   grid-area: aside;
-  padding: 5%;
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
+  padding: 3%;
+  align-self: start;
+}
+.imgindia {
+  grid-area: aside;
+  padding: 3%;
+  align-self: start;
+}
+.imgalbatros {
+  grid-area: aside;
+  padding: 3%;
+  align-self: start;
 }
 
 /* Grid End */
 
-aside img {
-  width: 70%;
+figure img {
+  width: 40%;
+}
+
+figcaption {
+  font-size: 0.8em;
 }
 
 main {
@@ -381,6 +393,13 @@ footer {
       "article1 ."
       "article1 ."
       "aside .";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .product3 {
+    display: block;
   }
   .article4 {
     display: none;
