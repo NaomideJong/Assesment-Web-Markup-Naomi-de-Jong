@@ -83,7 +83,6 @@ body {
 main {
   color: #ffffff;
   display: grid;
-  grid-template-columns: auto auto auto;
   column-gap: 2rem;
   grid-template-areas:
     "article2 article1 article3"
@@ -93,7 +92,7 @@ main {
     "article5 article1 article4"
     "article5 article1 article4"
     "article5 article6 article6"
-    "product1 product2 product3";
+    "aside aside aside";
 }
 
 main .article1 {
@@ -127,20 +126,13 @@ main .article6 {
   align-self: start;
 }
 
-main .product1 {
-  grid-area: product1;
+.aside {
+  grid-area: aside;
   padding: 5%;
   align-self: center;
-}
-main .product2 {
-  grid-area: product2;
-  padding: 5%;
-  align-self: center;
-}
-main .product3 {
-  grid-area: product3;
-  padding: 5%;
-  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
 }
 
 /* Grid End */
@@ -356,7 +348,7 @@ footer {
       "article3 article5"
       "article6 article6"
       "article6 article6"
-      "product1 product2";
+      "aside aside";
   }
   .article4 {
     display: none;
@@ -388,9 +380,7 @@ footer {
       "article1 ."
       "article1 ."
       "article1 ."
-      "product1 ."
-      "product2 ."
-      "product3 .";
+      "aside .";
   }
   .article4 {
     display: none;

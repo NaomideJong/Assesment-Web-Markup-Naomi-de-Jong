@@ -75,89 +75,34 @@ a {
 }
 
 body {
-  width: 100vw;
+  width: 98vw;
 }
 
-/* Grid Start */
-
-main {
-  color: #ffffff;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 2rem;
-  grid-template-areas:
-    "article2 article1 article3"
-    "article2 article1 article3"
-    "article5 article1 article3"
-    "article5 article1 article4"
-    "article5 article1 article4"
-    "article5 article1 article4"
-    "article5 article6 article6"
-    "product1 product2 product3";
+.flexwrapper {
+  display: flex;
+  flex-direction: row;
 }
 
-main .article1 {
-  grid-area: article1;
+article {
+  color: #fff;
   padding: 3%;
-  align-self: center;
-}
-main .article2 {
-  grid-area: article2;
-  padding: 3%;
-  align-self: start;
-}
-main .article3 {
-  grid-area: article3;
-  padding: 3%;
-  align-self: end;
-}
-main .article4 {
-  grid-area: article4;
-  padding: 3%;
-  align-self: end;
-}
-main .article5 {
-  grid-area: article5;
-  padding: 3%;
-  align-self: center;
-}
-main .article6 {
-  grid-area: article6;
-  padding: 3%;
-  align-self: start;
 }
 
-main .product1 {
-  grid-area: product1;
-  padding: 5%;
-  align-self: center;
-}
-main .product2 {
-  grid-area: product2;
-  padding: 5%;
-  align-self: center;
-}
-main .product3 {
-  grid-area: product3;
-  padding: 5%;
-  align-self: center;
+aside {
+  color: #fff;
 }
 
-/* Grid End */
-
-aside img {
+table {
   width: 70%;
+  color: #fff;
+  margin: 2%;
 }
 
-main {
-  padding: 2%;
-}
-main header {
-  font-size: 1.5em;
-  margin: 3%;
-}
-p {
-  font-size: 1em;
+table,
+th,
+td {
+  padding: 0.5%;
+  border: 1px solid #fff;
 }
 
 footer {
@@ -345,24 +290,16 @@ footer {
 /* End Hamburger Menu */
 
 @media screen and (max-width: 1180px) {
-  main {
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "article1 article2"
-      "article1 article2"
-      "article3 article2"
-      "article3 article5"
-      "article3 article5"
-      "article3 article5"
-      "article6 article6"
-      "article6 article6"
-      "product1 product2";
+  .flexwrapper {
+    flex-direction: column;
   }
-  .article4 {
+  .product1 {
     display: none;
   }
-  .product3 {
-    display: none;
+  aside {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
   }
 }
 
@@ -373,29 +310,18 @@ footer {
   .navigation {
     display: none;
   }
-  main {
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "article5 ."
-      "article5 ."
-      "article5 ."
-      "article3 ."
-      "article3 ."
-      "article3 ."
-      "article2 ."
-      "article2 ."
-      "article2 ."
-      "article1 ."
-      "article1 ."
-      "article1 ."
-      "product1 ."
-      "product2 ."
-      "product3 .";
+  .flexwrapper {
+    flex-direction: column;
   }
-  .article4 {
+  article {
     display: none;
   }
-  .article6 {
-    display: none;
+  aside {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+  }
+  .product1 {
+    display: block;
   }
 }
