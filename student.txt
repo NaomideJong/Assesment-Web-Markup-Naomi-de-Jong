@@ -1,0 +1,4 @@
+o	Student name: Naomi de Jong
+o	Student number: 562748
+o	Student class: inf1C
+o	URL student GitHub repository: https://github.com/NaomideJong/Assesment-Web-Markup-Naomi-de-Jong
